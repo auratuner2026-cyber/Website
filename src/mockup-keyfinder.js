@@ -4,7 +4,7 @@ const NOTES  = ['C','C#','D','D#','E','F','F#','G','G#','A','A#','B']
 const COLORS = ['#F24039','#FA6B26','#FAB826','#F2E12E','#8CE640','#33D966','#26D1B8','#1DBFEB','#3C83FF','#7059F2','#B852EB','#EB4DA6']
 const IN_SCALE = [true,false,true,false,true,true,false,true,false,true,false,true]
 const HEIGHTS  = [88,5,32,8,72,38,6,80,10,28,6,18]
-const ANIM_DUR = [3.2,3.8,3.5,4.0,3.0,3.6,4.2,3.3,3.9,3.4,4.4,2.8]
+const ANIM_DUR = [5.2,5.8,5.5,6.0,5.0,5.6,6.2,5.3,5.9,5.4,6.4,4.8]
 
 export function keyFinderMockupHTML() {
 
