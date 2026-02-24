@@ -97,21 +97,11 @@ export function keyFinderMockupHTML() {
       </div>
 
       <!-- Listening indicator -->
-      <div style="display:flex; align-items:center; gap:6px; padding:8px 14px 4px; flex-shrink:0;">
+      <div style="display:flex; align-items:center; gap:6px; padding:8px 14px 14px; flex-shrink:0;">
         <div style="width:6px; height:6px; border-radius:50%; background:#F24050; box-shadow:0 0 6px #F24050; flex-shrink:0; animation:glow-pulse 2s ease-in-out infinite;"></div>
         <div style="font-size:10px; font-family:ui-monospace,monospace; color:rgba(255,255,255,0.50);">0:07</div>
         <div style="flex:1; height:3px; background:rgba(255,255,255,0.06); border-radius:2px; overflow:hidden; margin-left:2px;">
           <div style="width:45%; height:100%; background:rgba(60,131,255,0.5); border-radius:2px;"></div>
-        </div>
-      </div>
-
-      <!-- bottomBar: Reset + Stop -->
-      <div style="display:flex; gap:6px; padding:6px 10px 14px; flex-shrink:0;">
-        <div style="flex:1; background:rgba(255,255,255,0.05); border:1px solid rgba(255,255,255,0.1); border-radius:8px; padding:12px 0; display:flex; align-items:center; justify-content:center; gap:5px; font-size:10.5px; font-weight:500; color:white; white-space:nowrap;">
-          <span style="font-size:12px;">↺</span> Reset
-        </div>
-        <div style="flex:1.2; background:rgba(242,64,80,0.06); border:1px solid rgba(242,64,80,0.35); border-radius:8px; padding:12px 0; display:flex; align-items:center; justify-content:center; gap:5px; font-size:10.5px; font-weight:600; color:#F24050; white-space:nowrap;">
-          <span style="font-size:7px;">●</span> Stop
         </div>
       </div>
 
