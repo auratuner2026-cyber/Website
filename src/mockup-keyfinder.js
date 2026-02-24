@@ -6,56 +6,30 @@ const IN_SCALE = [true,false,true,false,true,true,false,true,false,true,false,tr
 const HEIGHTS  = [88,5,32,8,72,38,6,80,10,28,6,18]
 const ANIM_DUR = [1.8,2.3,2.0,2.5,1.6,2.1,2.4,1.7,2.2,1.9,2.6,1.5]
 
-function pianoKeyboardHTML() {
-  const whiteKeyNotes = [
-    { note: 0, name: 'C' },
-    { note: 2, name: 'D' },
-    { note: 4, name: 'E' },
-    { note: 5, name: 'F' },
-    { note: 7, name: 'G' },
-    { note: 9, name: 'A' },
-    { note: 11, name: 'B' },
-  ]
-  const blackKeyNotes = [
-    { note: 1, name: 'C#', left: '11.5%' },
-    { note: 3, name: 'D#', left: '25.5%' },
-    { note: 6, name: 'F#', left: '53.5%' },
-    { note: 8, name: 'G#', left: '67.5%' },
-    { note: 10, name: 'A#', left: '81.5%' },
-  ]
-
-  const whiteKeys = whiteKeyNotes.map(k => {
-    const inScale = IN_SCALE[k.note]
-    const isRoot = k.note === 0
-    const bg = isRoot
-      ? COLORS[k.note]
-      : inScale
-        ? 'rgba(255,255,255,0.92)'
-        : 'rgba(255,255,255,0.70)'
-    const labelColor = isRoot ? 'white' : inScale ? '#222' : 'rgba(0,0,0,0.25)'
-    const border = inScale ? 'rgba(255,255,255,0.3)' : 'rgba(255,255,255,0.15)'
-    const glow = isRoot ? `box-shadow:0 0 8px ${COLORS[k.note]}88;` : ''
-    return `<div style="flex:1; background:${bg}; border-radius:0 0 3px 3px; border:0.5px solid ${border}; display:flex; align-items:flex-end; justify-content:center; padding-bottom:3px; position:relative; ${glow}">
-      <span style="font-size:6px; font-weight:${isRoot ? '800' : '500'}; color:${labelColor}; line-height:1;">${k.name}</span>
-    </div>`
-  }).join('')
-
-  const blackKeys = blackKeyNotes.map(k => {
-    const inScale = IN_SCALE[k.note]
-    const bg = inScale ? `${COLORS[k.note]}` : 'rgba(30,30,35,0.95)'
-    const glow = inScale ? `box-shadow:0 2px 6px ${COLORS[k.note]}66;` : ''
-    return `<div style="position:absolute; left:${k.left}; top:0; width:10%; height:60%; background:${bg}; border-radius:0 0 2px 2px; z-index:2; border:0.5px solid rgba(0,0,0,0.3); ${glow}"></div>`
-  }).join('')
-
-  return `
-    <div style="position:relative; height:100%; display:flex; gap:1px;">
-      ${whiteKeys}
-      ${blackKeys}
-    </div>`
-}
-
 export function keyFinderMockupHTML() {
 
+  // Scale chips — colored circles matching the real app
+  const chips = NOTES.map((n, i) => {
+    const inScale = IN_SCALE[i]
+    const isRoot = i === 0
+    const bg = isRoot
+      ? COLORS[i]
+      : inScale
+        ? `${COLORS[i]}30`
+        : 'rgba(255,255,255,0.06)'
+    const border = isRoot
+      ? COLORS[i]
+      : inScale
+        ? `${COLORS[i]}60`
+        : 'rgba(255,255,255,0.10)'
+    const color = isRoot ? 'white' : inScale ? COLORS[i] : 'rgba(255,255,255,0.22)'
+    const weight = isRoot ? '800' : inScale ? '600' : '400'
+    const size = '18px'
+    const glow = isRoot ? `box-shadow:0 0 6px ${COLORS[i]}88;` : ''
+    return `<div style="width:${size}; height:${size}; border-radius:50%; background:${bg}; border:1px solid ${border}; display:flex; align-items:center; justify-content:center; font-size:6px; font-weight:${weight}; color:${color}; flex-shrink:0; ${glow}">${n}</div>`
+  }).join('')
+
+  // Chromagram bars
   const bars = NOTES.map((n, i) => {
     const inScale = IN_SCALE[i]
     const color = inScale ? COLORS[i] : 'rgba(255,255,255,0.12)'
@@ -94,7 +68,7 @@ export function keyFinderMockupHTML() {
             <div style="display:flex; flex-direction:column; padding-top:6px; gap:2px;">
               <div style="font-size:16px; font-weight:500; color:rgba(255,255,255,0.75);">Major</div>
               <div style="display:flex; flex-direction:column; gap:0px;">
-                <div style="font-size:6.5px; font-weight:600; color:rgba(255,255,255,0.30); letter-spacing:0.1em; text-transform:uppercase;">ALT</div>
+                <div style="font-size:6.5px; font-weight:600; color:rgba(255,255,255,0.30); letter-spacing:0.1em; text-transform:uppercase;">alt</div>
                 <div style="font-size:11px; font-weight:600; color:rgba(255,255,255,0.50);">A Minor</div>
               </div>
             </div>
@@ -104,15 +78,15 @@ export function keyFinderMockupHTML() {
           </div>
         </div>
 
-        <!-- Piano Keyboard -->
+        <!-- Scale Chips -->
         <div style="flex-shrink:0;">
           <div style="font-size:7.5px; font-weight:600; color:rgba(255,255,255,0.40); letter-spacing:0.14em; text-transform:uppercase; margin-bottom:5px;">SCALE</div>
-          <div style="height:40px; border-radius:0 0 6px 6px; overflow:hidden;">
-            ${pianoKeyboardHTML()}
+          <div style="display:flex; gap:3px; justify-content:space-between;">
+            ${chips}
           </div>
         </div>
 
-        <!-- chromagramPanel -->
+        <!-- Chromagram -->
         <div style="flex:1; display:flex; flex-direction:column; min-height:0; background:rgba(255,255,255,0.03); backdrop-filter:blur(12px); border:1px solid rgba(255,255,255,0.06); border-radius:12px; padding:10px 10px 6px;">
           <div style="font-size:7.5px; font-weight:600; color:rgba(255,255,255,0.40); letter-spacing:0.14em; text-transform:uppercase; margin-bottom:8px; flex-shrink:0;">CHROMAGRAM</div>
           <div style="flex:1; display:flex; align-items:flex-end; gap:3px; min-height:0;">
@@ -126,7 +100,9 @@ export function keyFinderMockupHTML() {
       <div style="display:flex; align-items:center; gap:6px; padding:8px 14px 4px; flex-shrink:0;">
         <div style="width:6px; height:6px; border-radius:50%; background:#F24050; box-shadow:0 0 6px #F24050; flex-shrink:0; animation:glow-pulse 2s ease-in-out infinite;"></div>
         <div style="font-size:10px; font-family:ui-monospace,monospace; color:rgba(255,255,255,0.50);">0:07</div>
-        <div style="flex:1;"></div>
+        <div style="flex:1; height:3px; background:rgba(255,255,255,0.06); border-radius:2px; overflow:hidden; margin-left:2px;">
+          <div style="width:45%; height:100%; background:rgba(60,131,255,0.5); border-radius:2px;"></div>
+        </div>
       </div>
 
       <!-- bottomBar: Reset + Stop -->
