@@ -106,12 +106,12 @@ export function keyFinderMockupHTML() {
       </div>
 
       <!-- bottomBar: Reset + Stop -->
-      <div style="display:flex; gap:8px; padding:6px 12px 16px; flex-shrink:0;">
-        <div style="flex:1; background:rgba(255,255,255,0.05); border:1px solid rgba(255,255,255,0.1); border-radius:22px; padding:10px 0; display:flex; align-items:center; justify-content:center; gap:4px; font-size:10px; font-weight:500; color:white; white-space:nowrap;">
+      <div style="display:flex; gap:6px; padding:6px 10px 14px; flex-shrink:0;">
+        <div style="flex:1; background:rgba(255,255,255,0.05); border:1px solid rgba(255,255,255,0.1); border-radius:14px; padding:11px 0; display:flex; align-items:center; justify-content:center; gap:5px; font-size:10.5px; font-weight:500; color:white; white-space:nowrap;">
           <span style="font-size:12px;">↺</span> Reset
         </div>
-        <div style="flex:1; background:rgba(242,64,80,0.08); border:1px solid rgba(242,64,80,0.4); border-radius:22px; padding:10px 0; display:flex; align-items:center; justify-content:center; gap:4px; font-size:10px; font-weight:600; color:#F24050; white-space:nowrap;">
-          <span style="font-size:7px;">■</span> Stop
+        <div style="flex:1.2; background:rgba(242,64,80,0.06); border:1px solid rgba(242,64,80,0.35); border-radius:14px; padding:11px 0; display:flex; align-items:center; justify-content:center; gap:5px; font-size:10.5px; font-weight:600; color:#F24050; white-space:nowrap;">
+          <span style="font-size:7px;">●</span> Stop
         </div>
       </div>
 
