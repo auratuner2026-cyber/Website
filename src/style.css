@@ -201,3 +201,16 @@
   -webkit-backdrop-filter: blur(20px);
   border-bottom: 1px solid rgba(255, 255, 255, 0.06);
 }
+
+/* Larger Key Finder mockup for better visual weight */
+.iphone-kf {
+  width: 250px;
+  height: 500px;
+}
+
+@media (min-width: 768px) {
+  .iphone-kf {
+    width: 270px;
+    height: 540px;
+  }
+}
