@@ -193,8 +193,16 @@
   </section>
 
   <!-- ===================== FEATURE: TUNER ===================== -->
-  <section class="py-24 px-6 overflow-hidden">
-    <div class="max-w-5xl mx-auto">
+  <section class="py-24 px-6 overflow-hidden relative">
+    <div class="waveform-bg" style="opacity:0.6;">
+      <svg class="waveform-track" style="bottom:40%; animation-duration:16s;" viewBox="0 0 1440 120" preserveAspectRatio="none" fill="none" xmlns="http://www.w3.org/2000/svg">
+        <path d="M0 60 C80 30, 160 90, 240 60 C320 30, 400 90, 480 60 C560 30, 640 90, 720 60 C800 30, 880 90, 960 60 C1040 30, 1120 90, 1200 60 C1280 30, 1360 90, 1440 60" stroke="#33D966" stroke-width="1.5"/>
+      </svg>
+      <svg class="waveform-track" style="bottom:55%; animation-duration:20s; animation-delay:-4s; opacity:0.5;" viewBox="0 0 1440 120" preserveAspectRatio="none" fill="none" xmlns="http://www.w3.org/2000/svg">
+        <path d="M0 60 C60 20, 120 100, 180 60 C240 20, 300 100, 360 60 C420 20, 480 100, 540 60 C600 20, 660 100, 720 60 C780 20, 840 100, 900 60 C960 20, 1020 100, 1080 60 C1140 20, 1200 100, 1260 60 C1320 20, 1380 100, 1440 60" stroke="#33D966" stroke-width="1"/>
+      </svg>
+    </div>
+    <div class="max-w-5xl mx-auto relative z-10">
       <div class="flex flex-col md:flex-row items-center gap-16">
 
         <div id="tuner-mockup" class="flex justify-center section-reveal" style="flex-shrink:0;"></div>
@@ -220,8 +228,16 @@
   </section>
 
   <!-- ===================== FEATURE: KEY FINDER ===================== -->
-  <section class="py-24 px-6 overflow-hidden">
-    <div class="max-w-5xl mx-auto">
+  <section class="py-24 px-6 overflow-hidden relative">
+    <div class="waveform-bg" style="opacity:0.6;">
+      <svg class="waveform-track" style="bottom:35%; animation-duration:18s; animation-delay:-3s;" viewBox="0 0 1440 120" preserveAspectRatio="none" fill="none" xmlns="http://www.w3.org/2000/svg">
+        <path d="M0 60 C60 100, 120 20, 180 60 C240 100, 300 20, 360 60 C420 100, 480 20, 540 60 C600 100, 660 20, 720 60 C780 100, 840 20, 900 60 C960 100, 1020 20, 1080 60 C1140 100, 1200 20, 1260 60 C1320 100, 1380 20, 1440 60" stroke="#3C83FF" stroke-width="1.5"/>
+      </svg>
+      <svg class="waveform-track" style="bottom:50%; animation-duration:22s; animation-delay:-8s; opacity:0.5;" viewBox="0 0 1440 120" preserveAspectRatio="none" fill="none" xmlns="http://www.w3.org/2000/svg">
+        <path d="M0 60 C80 10, 160 110, 240 60 C320 10, 400 110, 480 60 C560 10, 640 110, 720 60 C800 10, 880 110, 960 60 C1040 10, 1120 110, 1200 60 C1280 10, 1360 110, 1440 60" stroke="#B852EB" stroke-width="1"/>
+      </svg>
+    </div>
+    <div class="max-w-5xl mx-auto relative z-10">
       <div class="flex flex-col md:flex-row-reverse items-center gap-16">
 
         <div id="keyfinder-mockup" class="flex justify-center section-reveal" style="flex-shrink:0;"></div>
