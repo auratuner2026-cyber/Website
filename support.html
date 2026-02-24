@@ -1,1 +1,104 @@
-<!DOCTYPE html><html><body></body></html>
+<!DOCTYPE html>
+<html lang="en" class="scroll-smooth">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Support — Aura Tuner</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800;900&display=swap" rel="stylesheet">
+  <script type="module" src="/src/main.js"></script>
+</head>
+<body class="bg-tone-bg text-white font-sans min-h-screen">
+
+  <!-- NAVBAR -->
+  <nav id="navbar" class="fixed top-0 left-0 right-0 z-50 transition-all duration-300">
+    <div class="max-w-6xl mx-auto px-6 h-16 flex items-center justify-between">
+      <a href="/" class="flex items-center gap-3">
+        <img src="/assets/icon.png" alt="Aura Tuner" class="w-8 h-8 rounded-xl" />
+        <span class="font-bold text-white tracking-tight">Aura Tuner</span>
+      </a>
+      <div class="hidden md:flex items-center gap-8 text-sm font-medium" style="color:rgba(255,255,255,0.6)">
+        <a href="/#features" class="hover:text-white transition-colors">Features</a>
+        <a href="privacy.html" class="hover:text-white transition-colors">Privacy</a>
+        <a href="support.html" class="text-white">Support</a>
+      </div>
+      <a href="#" class="bg-tone-blue text-white text-sm font-semibold px-4 py-2 rounded-xl transition-all hover:opacity-90">Download</a>
+    </div>
+  </nav>
+
+  <main class="max-w-2xl mx-auto px-6 pt-32 pb-24">
+
+    <div class="mb-12">
+      <p class="text-tone-blue text-sm font-semibold tracking-widest uppercase mb-3">Help</p>
+      <h1 class="text-4xl font-black tracking-tight mb-4">Support</h1>
+      <p class="leading-relaxed" style="color:rgba(255,255,255,0.5)">We're here to help. Reach out anytime.</p>
+    </div>
+
+    <!-- Contact card -->
+    <div class="glass p-8 mb-12">
+      <h2 class="text-xl font-bold mb-2">Contact Us</h2>
+      <p class="text-sm mb-6" style="color:rgba(255,255,255,0.5)">For bug reports, feature requests, or general questions — send us an email and we'll get back to you.</p>
+      <a href="mailto:feedback@tonefield.app"
+        class="inline-flex items-center gap-3 font-semibold px-5 py-3 rounded-xl transition-all"
+        style="background:rgba(60,131,255,0.1); border:1px solid rgba(60,131,255,0.2); color:#3C83FF">
+        <svg class="w-4 h-4" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+          <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M3 8l7.89 5.26a2 2 0 002.22 0L21 8M5 19h14a2 2 0 002-2V7a2 2 0 00-2-2H5a2 2 0 00-2 2v10a2 2 0 002 2z"/>
+        </svg>
+        feedback@tonefield.app
+      </a>
+    </div>
+
+    <!-- FAQ -->
+    <h2 class="text-2xl font-bold mb-6">Frequently Asked Questions</h2>
+    <div class="space-y-4">
+
+      <div class="glass-sm p-6">
+        <h3 class="font-semibold mb-2">Why does the app need microphone access?</h3>
+        <p class="text-sm leading-relaxed" style="color:rgba(255,255,255,0.5)">Aura Tuner needs microphone access to detect the pitch of your instrument in real time. Audio is processed entirely on your device — it's never recorded or sent anywhere.</p>
+      </div>
+
+      <div class="glass-sm p-6">
+        <h3 class="font-semibold mb-2">Does Aura Tuner work without internet?</h3>
+        <p class="text-sm leading-relaxed" style="color:rgba(255,255,255,0.5)">Yes — 100%. Aura Tuner is fully offline. No internet connection is required or used at any point.</p>
+      </div>
+
+      <div class="glass-sm p-6">
+        <h3 class="font-semibold mb-2">How do I capture system audio on Mac?</h3>
+        <p class="text-sm leading-relaxed" style="color:rgba(255,255,255,0.5)">Tap the input selector and choose "System Audio". You may be prompted to grant Screen Recording permission — this is required by macOS for system audio capture and is used only to analyze audio in real time.</p>
+      </div>
+
+      <div class="glass-sm p-6">
+        <h3 class="font-semibold mb-2">How do I change the reference pitch?</h3>
+        <p class="text-sm leading-relaxed" style="color:rgba(255,255,255,0.5)">Open Settings (the gear icon), then drag the Reference Pitch slider. You can set A4 anywhere from 432 Hz to 446 Hz. The default is 440 Hz.</p>
+      </div>
+
+      <div class="glass-sm p-6">
+        <h3 class="font-semibold mb-2">Are there any in-app purchases or subscriptions?</h3>
+        <p class="text-sm leading-relaxed" style="color:rgba(255,255,255,0.5)">No. Aura Tuner is a one-time download with no in-app purchases, no subscriptions, and no ads. Everything is included from day one.</p>
+      </div>
+
+      <div class="glass-sm p-6">
+        <h3 class="font-semibold mb-2">The tuner isn't detecting my instrument. What can I do?</h3>
+        <p class="text-sm leading-relaxed" style="color:rgba(255,255,255,0.5)">Make sure microphone access is granted in Settings → Privacy → Microphone. Play one clear note at a time close to the mic, and check that the correct preset is selected for your instrument.</p>
+      </div>
+
+    </div>
+  </main>
+
+  <footer class="py-12 px-6" style="border-top: 1px solid rgba(255,255,255,0.06)">
+    <div class="max-w-5xl mx-auto flex flex-col md:flex-row items-center justify-between gap-6">
+      <div class="flex items-center gap-3">
+        <img src="/assets/icon.png" alt="Aura Tuner" class="w-7 h-7 rounded-lg" style="opacity:0.8" />
+        <span class="text-sm" style="color:rgba(255,255,255,0.4)">© 2026 Aura Tuner. Made with love for musicians.</span>
+      </div>
+      <div class="flex items-center gap-6 text-sm" style="color:rgba(255,255,255,0.4)">
+        <a href="privacy.html" class="hover:text-white transition-colors">Privacy Policy</a>
+        <a href="support.html" class="hover:text-white transition-colors" style="color:rgba(255,255,255,0.7)">Support</a>
+        <a href="#" class="hover:text-white transition-colors">App Store</a>
+      </div>
+    </div>
+  </footer>
+
+</body>
+</html>
