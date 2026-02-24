@@ -46,6 +46,14 @@ export function keyFinderMockupHTML() {
   }).join('')
 
   return `
+  <style>
+    @keyframes bar-pulse-1 { 0%, 100% { height: 30%; } 50% { height: 80%; } }
+    @keyframes bar-pulse-2 { 0%, 100% { height: 60%; } 50% { height: 40%; } }
+    @keyframes bar-pulse-3 { 0%, 100% { height: 45%; } 50% { height: 90%; } }
+    @keyframes bar-pulse-4 { 0%, 100% { height: 70%; } 50% { height: 35%; } }
+    @keyframes bar-pulse-5 { 0%, 100% { height: 25%; } 50% { height: 75%; } }
+    @keyframes bar-pulse-6 { 0%, 100% { height: 85%; } 50% { height: 50%; } }
+  </style>
   <div class="iphone iphone-kf">
     <div class="iphone-screen" style="padding:0; display:flex; flex-direction:column; gap:0; overflow:hidden;">
 
