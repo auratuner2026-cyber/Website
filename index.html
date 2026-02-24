@@ -38,12 +38,77 @@
     </div>
   </nav>
 
-  <!-- Page content placeholder -->
-  <main class="pt-16">
-    <div class="min-h-screen flex items-center justify-center">
-      <h1 class="text-4xl font-black text-tone-blue">Aura Tuner</h1>
+  <!-- HERO -->
+  <section class="relative min-h-screen flex items-center justify-center overflow-hidden bg-tone-bg pt-16">
+
+    <!-- Animated waveform background -->
+    <div class="waveform-bg">
+      <svg class="waveform-track" viewBox="0 0 1440 120" preserveAspectRatio="none" fill="none" xmlns="http://www.w3.org/2000/svg">
+        <path d="M0 60 C60 20, 120 100, 180 60 C240 20, 300 100, 360 60 C420 20, 480 100, 540 60 C600 20, 660 100, 720 60 C780 20, 840 100, 900 60 C960 20, 1020 100, 1080 60 C1140 20, 1200 100, 1260 60 C1320 20, 1380 100, 1440 60" stroke="#3C83FF" stroke-width="2"/>
+        <path d="M0 60 C60 100, 120 20, 180 60 C240 100, 300 20, 360 60 C420 100, 480 20, 540 60 C600 100, 660 20, 720 60 C780 100, 840 20, 900 60 C960 100, 1020 20, 1080 60 C1140 100, 1200 20, 1260 60 C1320 100, 1380 20, 1440 60" stroke="#33D966" stroke-width="1.5" opacity="0.6"/>
+      </svg>
+      <svg class="waveform-track" style="animation-delay: -6s; bottom: 25%; opacity: 0.08;" viewBox="0 0 1440 120" preserveAspectRatio="none" fill="none" xmlns="http://www.w3.org/2000/svg">
+        <path d="M0 60 C80 10, 160 110, 240 60 C320 10, 400 110, 480 60 C560 10, 640 110, 720 60 C800 10, 880 110, 960 60 C1040 10, 1120 110, 1200 60 C1280 10, 1360 110, 1440 60" stroke="#B852EB" stroke-width="2"/>
+      </svg>
     </div>
-  </main>
+
+    <!-- Blue glow orb -->
+    <div class="absolute top-1/3 left-1/2 -translate-x-1/2 -translate-y-1/2 w-[600px] h-[600px] rounded-full pointer-events-none" style="background: radial-gradient(ellipse at center, rgba(60,131,255,0.08) 0%, transparent 70%);"></div>
+
+    <!-- Hero content -->
+    <div class="relative z-10 text-center max-w-4xl mx-auto px-6">
+
+      <!-- App icon with glow -->
+      <div class="flex justify-center mb-8">
+        <img src="/assets/icon.png" alt="Aura Tuner App Icon"
+          class="w-24 h-24 rounded-[22px] shadow-2xl"
+          style="animation: glow-pulse 2s ease-in-out infinite; box-shadow: 0 0 40px rgba(60,131,255,0.4)" />
+      </div>
+
+      <!-- Headline -->
+      <h1 class="text-5xl md:text-7xl font-black tracking-tight mb-6 leading-[1.05]">
+        Hear Everything.<br/>
+        <span class="text-tone-blue neon-text-blue">Miss Nothing.</span>
+      </h1>
+
+      <!-- Subline -->
+      <p class="text-lg md:text-xl max-w-2xl mx-auto mb-10 leading-relaxed font-light" style="color: rgba(255,255,255,0.6)">
+        A professional tuner and key analyzer for musicians who demand precision.<br class="hidden md:block"/>
+        Ad-free. Offline. Always.
+      </p>
+
+      <!-- CTA buttons -->
+      <div class="flex flex-col sm:flex-row items-center justify-center gap-4 mb-16">
+        <a href="#" class="flex items-center gap-3 bg-white text-black font-semibold px-6 py-3 rounded-2xl hover:opacity-90 transition-all duration-200 hover:scale-[1.02]">
+          <svg class="w-6 h-6" viewBox="0 0 24 24" fill="currentColor">
+            <path d="M18.71 19.5c-.83 1.24-1.71 2.45-3.05 2.47-1.34.03-1.77-.79-3.29-.79-1.53 0-2 .77-3.27.82-1.31.05-2.3-1.32-3.14-2.53C4.25 17 2.94 12.45 4.7 9.39c.87-1.52 2.43-2.48 4.12-2.51 1.28-.02 2.5.87 3.29.87.78 0 2.26-1.07 3.8-.91.65.03 2.47.26 3.64 1.98-.09.06-2.17 1.28-2.15 3.81.03 3.02 2.65 4.03 2.68 4.04-.03.07-.42 1.44-1.38 2.83M13 3.5c.73-.83 1.94-1.46 2.94-1.5.13 1.17-.34 2.35-1.04 3.19-.69.85-1.83 1.51-2.95 1.42-.15-1.15.41-2.35 1.05-3.11z"/>
+          </svg>
+          Download on the App Store
+        </a>
+        <div class="flex items-center gap-2 text-sm" style="color: rgba(255,255,255,0.4)">
+          <span class="w-1.5 h-1.5 rounded-full bg-tone-green inline-block"></span>
+          iOS · macOS · watchOS
+        </div>
+      </div>
+
+      <!-- Platform badges -->
+      <div class="flex items-center justify-center gap-6 text-xs font-medium tracking-widest uppercase" style="color: rgba(255,255,255,0.3)">
+        <span>iOS 17+</span>
+        <span class="w-px h-3 inline-block" style="background: rgba(255,255,255,0.2)"></span>
+        <span>macOS Sonoma</span>
+        <span class="w-px h-3 inline-block" style="background: rgba(255,255,255,0.2)"></span>
+        <span>watchOS</span>
+      </div>
+
+    </div>
+
+    <!-- Scroll indicator -->
+    <div class="absolute bottom-8 left-1/2 -translate-x-1/2 flex flex-col items-center gap-2 text-xs" style="color: rgba(255,255,255,0.3)">
+      <span>Scroll to explore</span>
+      <div class="w-px h-8" style="background: linear-gradient(to bottom, rgba(255,255,255,0.3), transparent)"></div>
+    </div>
+
+  </section>
 
 </body>
 </html>
